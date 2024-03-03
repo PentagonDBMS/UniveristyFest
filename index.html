@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Add favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>University Fest</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: linear-gradient(
+          90deg,
+          rgb(216 191 216) 0%,
+          rgb(226 232 209) 100%
+        );
+      }
+      .window {
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex-grow: 1;
+      }
+      .footer-segment {
+        padding: 2em 0em;
+        margin-top: auto;
+      }
+      @media screen and (max-width: 767px) {
+        .desktop.item {
+          display: none !important;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .mobile.item {
+          display: none !important;
+        }
+
+        .ui.grid {
+          width: 115%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ui container window" style="padding: 1em; min-height: 90vh">
+      <div class="ui large menu massive">
+        <div class="ui dropdown mobile icon item">
+          <i class="bars icon"></i>
+          <div class="menu">
+            <a
+              class="item"
+              href="https://student-pentagondbms-projects.vercel.app"
+            >
+              <i class="student icon"></i>Student</a
+            >
+            <a
+              class="item"
+              href="https://organizer-pentagondbms-projects.vercel.app"
+            >
+              <i class="users icon"></i>Organizer</a
+            >
+            <a
+              class="item"
+              href="https://admin-pentagondbms-projects.vercel.app"
+            >
+              <i class="user secret icon"></i>Admin</a
+            >
+          </div>
+        </div>
+        <div class="item">
+          <img src="/images/logo.png" />
+        </div>
+        <a
+          class="item desktop"
+          href="https://admin-pentagondbms-projects.vercel.app"
+        >
+          <i class="user secret icon"></i>Admin</a
+        >
+        <a
+          class="item desktop"
+          href="https://organizer-pentagondbms-projects.vercel.app"
+        >
+          <i class="users icon"></i>Organizer</a
+        >
+        <a
+          class="item desktop"
+          href="https://student-pentagondbms-projects.vercel.app"
+        >
+          <i class="student icon"></i>Student</a
+        >
+      </div>
+
+      <!-- Landing Page as Main Content -->
+      <div class="main-content">
+        <!-- Your main content here. Use similar structure as provided earlier -->
+        <div class="ui stackable grid" style="margin-top: 2em">
+          <div class="ui row">
+            <!-- Image -->
+            <div class="six wide column" style="align-self: center">
+              <div class="ui styled accordion">
+                <!-- Admin Panel Description -->
+                <div class="active title">
+                  <i class="dropdown icon"></i>
+                  Admin Panel
+                </div>
+                <div class="active content">
+                  <p>
+                    The Admin Panel serves as the control center, enabling
+                    administrators to manage users, including Admins,
+                    Organizers, and Students. Key functionalities include secure
+                    login, user account management, comprehensive user
+                    overviews, and system security enhancements. The Admin Panel
+                    ensures the smooth and secure operation of the Event
+                    Management System.
+                  </p>
+                  <a
+                    href="https://admin-pentagondbms-projects.vercel.app"
+                    class="ui primary button"
+                    >Admin Panel</a
+                  >
+                </div>
+
+                <!-- Student Panel Description -->
+
+                <!-- Organizer Panel Description -->
+                <div class="title">
+                  <i class="dropdown icon"></i>
+                  Organizer Panel
+                </div>
+                <div class="content">
+                  <p>
+                    The Organizer Panel empowers event organizers to create and
+                    manage events effectively. Organizers can manage event
+                    details, participant and volunteer lists, and
+                    accommodations. This panel is instrumental in ensuring the
+                    success of events by providing organizers with comprehensive
+                    management tools for event planning, execution, and
+                    participant engagement.
+                  </p>
+                  <a
+                    href="https://organizer-pentagondbms-projects.vercel.app"
+                    class="ui primary button"
+                    >Organizer Panel</a
+                  >
+                </div>
+                <div class="title">
+                  <i class="dropdown icon"></i>
+                  Student Panel
+                </div>
+                <div class="content">
+                  <p>
+                    The Student Panel is designed for participants to engage
+                    with the system, allowing them to register for events,
+                    manage their profiles, and receive updates. It supports both
+                    external students and institute students, facilitating event
+                    registration, confirmation emails for event participation
+                    and accommodation, and a personalized dashboard for event
+                    and accommodation management.
+                  </p>
+                  <a
+                    href="https://student-pentagondbms-projects.vercel.app"
+                    class="ui primary button"
+                    >Student Panel</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Accordion -->
+            <div class="ten wide column">
+              <img
+                src="/images/fest-removebg.png"
+                alt="University Fest"
+                style="max-width: 100%; height: auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div
+      class="ui inverted vertical segment footer-segment"
+      style="min-height: 10vh"
+    >
+      <div class="ui container" style="text-align: center">
+        University Fest Main Panel ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <div class="ui inverted divider"></div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".ui.dropdown").dropdown();
+      });
+
+      $(".ui.accordion").accordion();
+    </script>
+  </body>
+</html>
